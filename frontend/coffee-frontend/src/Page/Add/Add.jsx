@@ -11,15 +11,15 @@ const Add = () => {
         const category=form.category.value;
         const details=form.details.value;
         const photoUrl=form.photo.value;
-        const newCoffee={name,chef,supplier,taste,category,details,photoUrl}
-        console.log(newCoffee)
+        const newData={name,chef,supplier,taste,category,details,photoUrl}
+        console.log(newData)
         // send to server
         fetch('http://localhost:5000/add',{
             method:'POST',
             headers:{
             'content-type':'application/json',
         },
-        body:JSON.stringify(newCoffee)
+        body:JSON.stringify(newData)
 
         })
         .then(res=>res.json())
